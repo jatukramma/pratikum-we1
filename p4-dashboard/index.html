@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIAKAT Mini - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brend">SIAKAT Mini</div>
+        <nav class="nav-kanan">
+            <button class="notif" aria-label="Notifikasi, 3 belum dibaca">
+                <span class="badge">3</span>
+            </button>
+            <div class="profil"> 
+                <img src="admid.jpg" alt="avatar">
+                <span>Admin Prodi</span>
+            </div>
+            <a href="#" class="logout">Logout</a>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <nav class="menu" aria-label="Menu Utama">
+                <a href="#" class="aktif" >Dashboard</a>
+                <a href="#">Data Mahasiswa</a>
+                <a href="#">Mata Kuliah</a>
+                <a href="#">Nilai</a>
+                <a href="#">Laporan</a>
+                <a href="#" class="pengaturan">Pengaturan</a>
+            </nav>
+        </aside>
+
+        <main class="konten">
+            <h1>Dashboard</h1>
+
+            <section class="statistik">
+                <article class="kartu"><h2>Mahasiswa AKtif</h2><p class="angka">1.248</p></article>
+                <article class="kartu"><h2>Dosen</h2><p class="angka">62</p></article>
+                <article class="kartu"><h2>Mata Kuliah</h2><p class="angka">94</p></article>
+                <article class="kartu"><h2>Kelas Hari Ini</h2><p class="angka">18</p><span class="label-baru">Baru</span></article>
+            </section>
+
+            <section class="panel">
+                <h2>Pengumuman</h2>
+                <p>Pengisian KRS semester genap dibuka mulai senin. pastikan data akademik sdh diverifikasi dosen PA.</p>
+            </section>
+
+            <section class="panel">
+                <h2>Jadwal Kuliah</h2>
+                <div class="tabel-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="150">Hari</th>
+                                <th width="150">Jam</th>
+                                <th width="350">Matakuliah</th>
+                                <th width="350">Dosen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">Senin</td>
+                                <td>10:50-12:10</td>
+                                <td>P.Stuk</td>
+                                <td>Edya</td>
+                            </tr>
+                            <tr>
+                                <td>01:00-14:30</td>
+                                <td>B.Inggrisk</td>
+                                <td>Febri</td>
+                            </tr>
+                            <tr>
+                                <td>14:40-16:10</td>
+                                <td>B.Arab</td>
+                                <td>Abdhlh</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">selasa</td>
+                                <td>07:30-09:00</td>
+                                <td>Operasi</td>
+                                <td>Hayati</td>
+                            </tr>
+                            <tr>
+                                <td>09:10-10:40</td>
+                                <td>Techno</td>
+                                <td>Budi</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Rabu</td>
+                                <td>07:00-09:00</td>
+                                <td>Berkas</td>
+                                <td>Hafidy</td>
+                            </tr>
+                            <tr>
+                                <td>09:10-10:40</td>
+                                <td>Jarkom</td>
+                                <td>Ahmadi</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Kamis</td>
+                                <td>10:50-12:10</td>
+                                <td>Kalkulus</td>
+                                <td>Adani</td>
+                            </tr>
+                            <tr>
+                                <td>01:00-14:30</td>
+                                <td>Warga</td>
+                                <td>Maulana</td>
+                            </tr>
+                            <tr>
+                                <td>14:40-16:10</td>
+                                <td>Web1</td>
+                                <td>Saidi</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        &copy; 2026 Program Studi Teknik Informatika -FIT UNISKA
+    </footer>
+</body>
+</html>

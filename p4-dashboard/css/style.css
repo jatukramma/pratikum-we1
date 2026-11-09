@@ -1,0 +1,254 @@
+/* ===== 1 RESET & box model ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;  /* navbar, wrapper, footer vertikal */
+        font-family: system-ui, -apple-system, "segoe ui", Roboto,sans-serif;
+        background: #f4f6f8;
+        color: #212529
+    }
+    /* ===== 2. Navbar ===== */
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        height: 64px;
+        padding: 0 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1e3a5f;
+        color: #fff;
+    }
+    .brend { 
+        font-size: 1.25rem; 
+        font-weight: 700; 
+    }
+    .nav-kanan {
+         display: flex; 
+         gap: 1rem; 
+         align-items: center; 
+    }
+    .profil {
+        display: flex;
+        align-items: center;
+        gap: 10px
+    }
+    .profil img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .logout {
+        color: #fff;
+        text-decoration: none;
+        padding: 6px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 6px;
+    } 
+    .logout:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    /* ===== 3. Badge ===== */
+    .notif {
+        position: relative;
+        border: 0;
+        padding: 4px;
+        background: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+        color: white;
+    }
+    .badge {
+        position: absolute;
+        top: -4px;
+        right: -8px;
+        min-width: 18px;
+        padding: 1px 5px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 16px;
+        color: #fff;
+        background: #dc3545;
+        border-radius: 999px;
+    }
+
+    /* ===== 4. kerangka sidebar + konten ===== */
+    .wrapper { 
+        display: flex; 
+        flex: 1; 
+    } /* flex: 1 memotong kebawah */
+    
+    .sidebar {
+        flex: 0 0 240px;
+        padding: 1rem;
+        background: #fff;
+        border-right: 1px solid #dee2e6;
+        display: flex;
+        flex-direction: column;
+    }
+    .pengaturan {
+        margin-top: auto;
+    }
+    .konten {
+        flex: 1;
+        min-width: 0;
+        padding: 1.5rem;
+    }
+    .menu {
+        display: flex; 
+        flex-direction: column;
+        flex: 1; 
+        gap: 4px;
+    }
+    .menu  a{
+        padding: 10px 14px;
+        border-radius: 6px;
+        color: #495057;
+        text-decoration: none;
+    }
+    .menu a:hover {
+        background: #e9ecef;
+    }
+    .menu a.aktif {
+        background: #1e3a5f; color:#fff
+    }
+
+    /* ===== 5. konten ===== */
+    .konten h1 { margin-top: 0; }
+    .statistik {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .kartu {
+        flex: 1 1 200px;
+        padding: 1rem 1.23rem;
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        position: relative;
+    }
+    .kartu h2 {
+        margin: 0 0 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #6c757d;
+    }
+    .angka {
+        margin: 0; 
+        font-size: 1.75rem; 
+        font-weight: 700
+    }
+    .label-baru {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background: #dc3545;
+        color: white;;
+        padding: 3px 8px;
+        border-radius: 20px;
+        font-size: 0.75rem;;
+        font-weight: 700;
+    }
+    .panel { 
+        margin-bottom: 1.5rem;
+        padding: 1.25rem;
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+    }
+    /* ===== 6. footer ===== */
+    .footer {
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: #6c757d;
+        background: #fff;
+        border-top: 1px solid #dee2e6;
+    }
+    /* ===== 7. layar <=768px ===== */
+    @media (max-width: 768px) {
+        .wrapper {
+            flex-direction: column;
+        }
+        .sidebar {
+            flex-basis: auto;  /*basis kini berlaku untuk tinggi */
+            border-right: 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .menu {
+            flex-direction: row; 
+            flex-wrap: wrap;
+        }
+        .pengaturan {
+            margin-top: 0;
+        }
+        .konten {
+            padding: 1rem;
+        }
+        .navbar {
+            padding: 0 8px;
+        }
+        .nav-kanan {
+            gap: 0.5rem;
+        }
+    }
+    @media (max-width: 480px){
+        .navbar {
+            padding: 0 8px;
+        }
+        .brend {
+            font-size: 1rem;
+        }
+        .nav-kanan {
+            gap: 6px;
+        }
+        .profil {
+            gap: 5px;
+            font-size: 0.75rem
+        }
+        .profil img {
+            width: 32px;
+            height: 32px;
+        }
+        .logout {
+            padding: 5px 7px;
+            font-size: 0.75rem;
+        }
+        .konten {
+            padding: 12px;
+        }
+        .kartu {
+            flex-basis: 100%;
+        }
+    }
+    /* ==== 8. table jadwal ===== */
+    .table-container {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    table {
+        width: 100%;
+        min-width: 550px;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        padding: 10px;
+        text-align: left;
+    }
+    thead th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: #3498db;
+        color: white;
+    }
+    tbody tr:nth-child(even) {
+        background: #f2f6fa;
+    }
